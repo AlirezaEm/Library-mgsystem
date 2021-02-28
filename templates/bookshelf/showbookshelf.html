@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelfs</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>Shelf Number</th>
+                <th>Shelf Genre</th>
+                <th>Shelfguy Number</th>
+                <th>books</th>
+            </tr>
+            {%for datadisplay in sqlservconn%}
+            <tr>
+                <td>{{datadisplay.Id}}</td>
+                <td>{{datadisplay.Genre}}</td>
+                <td>{{datadisplay.Sgssn}}</td>
+                <td>{{datadisplay.Bname}}</td>
+            </tr>    
+            {%endfor%}
+        </table>
+        <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

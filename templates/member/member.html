@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>Ssn</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Phone Number</th>
+                <th>Birthday</th>
+                <th>Age</th>
+                <th>Register Date</th>
+                <th>Expire Date</th>
+                <th>Refrenced Cashier Number</th>
+            </tr>
+            {%for datadisplay in sqlservconn%}
+            <tr>
+                <td>{{datadisplay.Ssn}}</td>
+                <td>{{datadisplay.Fname}}</td>
+                <td>{{datadisplay.Lname}}</td>
+                <td>{{datadisplay.Phonenum}}</td>
+                <td>{{datadisplay.Birthday}}</td>
+                <td>{{datadisplay.age}}</td>
+                <td>{{datadisplay.Regdate}}</td>
+                <td>{{datadisplay.Expdate}}</td>
+                <td>{{datadisplay.Cpssn}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

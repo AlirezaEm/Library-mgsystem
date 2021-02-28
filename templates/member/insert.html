@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert member</title>
+</head>
+<body>
+    <center>
+    <h1> Enter New Member Data </h1>
+    <hr/>
+    <form method="POST">
+        {% csrf_token %}
+        <table border="1" style=" background-color:rgb(0, 247, 255)">
+            <tr>
+                <td>SSN</td>
+                <td><input type="text" placeholder="member Ssn.." name="member_ssn"></td>
+            </tr>
+            <tr>
+                <td>Fname</td>
+                <td><input type="text" placeholder="member Fname.." name="member_fname"></td>
+            </tr>
+            <tr>
+                <td>Lname</td>
+                <td><input type="text" placeholder="member Lname.." name="member_lname"></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td><input type="text" placeholder="member Birthday.." name="member_birthday"></td>
+            </tr>
+            <tr>
+                <td>Rgister date</td>
+                <td><input type="text" placeholder="member Date.." name="member_regdate"></td>
+            </tr>
+            <tr>
+                <td>Expire date</td>
+                <td><input type="text" placeholder="member Expdate.." name="member_expdate"></td>
+            </tr>
+            <tr>
+                <td>Cashier SSN</td>
+                <td><input type="text" placeholder="member Cpssn.." name="member_cpssn"></td>
+            </tr>
+            <tr>
+                <td>Member Phone</td>
+                <td><input type="text" placeholder="memphone Phonenum.." name="memphone_phonenum"></td>
+            </tr>
+        </table>
+        <hr>
+        <input type="submit" value="Insert" onclick="return alert('Record is seved successfully')"/>
+    </form>
+    <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cashiers</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>cssn</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>birthday</th>
+                <th>salary</th>
+                <th>phone number</th>
+                <th>city</th>
+                <th>street</th>
+                <th>house number</th>
+                <th>age</th>
+            </tr>
+            {%for datadisplay in sqlservconn%}
+            <tr>
+                <td>{{datadisplay.cssn}}</td>
+                <td>{{datadisplay.Fname}}</td>
+                <td>{{datadisplay.Lname}}</td>
+                <td>{{datadisplay.Birthday}}</td>
+                <td>{{datadisplay.Salary}}</td>
+                <td>{{datadisplay.Phonenum}}</td>
+                <td>{{datadisplay.city}}</td>
+                <td>{{datadisplay.street}}</td>
+                <td>{{datadisplay.hnum}}</td>
+                <td>{{datadisplay.age}}</td>
+           
+            </tr>
+            {%endfor%}
+        </table>
+        <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

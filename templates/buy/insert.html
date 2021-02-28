@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> buying action</title>
+</head>
+<body>
+    <center>
+    <h1> Enter Buy Data </h1>
+    <hr/>
+    <form method="POST">
+        {% csrf_token %}
+        <table border="1" style=" background-color:rgb(0, 247, 255)">
+            <tr>
+                <td>Cashier SSN</td>
+                <td><input type="text" placeholder="buy cssn.." name="buy_cssn"></td>
+            </tr>
+            <tr>
+                <td>Book Code</td>
+                <td><input type="text" placeholder="buy bcode.." name="buy_bcode"></td>
+            </tr>
+            <tr>
+                <td>Borrower SSN</td>
+                <td><input type="text" placeholder="buy mssn.." name="buy_mssn"></td>
+            </tr>
+        </table>
+        <hr>
+        <input type="submit" value="Insert" onclick="return alert('Record is seved successfully')"/>
+    </form>
+    <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

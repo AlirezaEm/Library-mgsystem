@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert new chashier</title>
+</head>
+<body>
+    <center>
+    <h1> Enter New Cashier Data </h1>
+    <hr/>
+    <form method="POST">
+        {% csrf_token %}
+        <table border="1" style=" background-color:rgb(0, 247, 255)">
+            <tr>
+                <td>SSN</td>
+                <td><input type="text" placeholder="cashier ssn.." name="cashier_cssn"></td>
+            </tr>
+            <tr>
+                <td>Fname</td>
+                <td><input type="text" placeholder="cashier Fname.." name="cashier_fname"></td>
+            </tr>
+            <tr>
+                <td>Lname</td>
+                <td><input type="text" placeholder="cashier Lname.." name="cashier_lname"></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td><input type="text" placeholder="cashier Birthday.." name="cashier_birthday"></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="text" placeholder="cashier Salary.." name="cashier_salary"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" placeholder="cashier phone.." name="cashier_phonenum"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" placeholder="cashier address.." name="cashier_city"></td>
+            </tr>
+            <tr>
+                <td>Street</td>
+                <td><input type="text" placeholder="cashier address.." name="cashier_street"></td>
+            </tr>
+            <tr>
+                <td>House Number</td>
+                <td><input type="text" placeholder="cashier address" name="cashier_hnum"></td>
+            </tr>
+        </table>
+        <hr>
+        <input type="submit" value="Insert" onclick="return alert('Record is saved successfully')"/>
+    </form>
+    <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>

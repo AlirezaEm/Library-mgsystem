@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+</head>
+<body>
+    <center>
+        <table border="1">
+            <tr>
+                <th>member Number</th>
+                <th>member lname</th>
+                <th>cashier Number</th>
+                <th>book code</th>
+                <th> book name</th>
+                <th>book price</th>
+            </tr>
+            {%for datadisplay in sqlservconn%}
+            <tr>
+                <td>{{datadisplay.smssn}}</td>
+                <td>{{datadisplay.Lname}}</td>
+                <td>{{datadisplay.sspssn}}</td>
+                <td>{{datadisplay.sbcode}}</td>
+                <td>{{datadisplay.Bname}}</td>
+                <td>{{datadisplay.Price}} T</td>
+            </tr>    
+            {%endfor%}
+        </table>
+        <p></p>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000';" value="Go Back Home" />
+    </center>
+</body>
+</html>
